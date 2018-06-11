@@ -349,8 +349,10 @@ public class TL_LevelMediator : MonoBehaviour {
 			}
 		}
         //Build the navmesh
+        #if UNITY_EDITOR
         UnityEditor.AI.NavMeshBuilder.BuildNavMesh();
-	}
+        #endif
+    }
 
     void Update()
     {

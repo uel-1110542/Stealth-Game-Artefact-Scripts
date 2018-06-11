@@ -205,8 +205,8 @@ public class TL_PCStats : MonoBehaviour {
         //If the instructions are off
         if (!bl_Instructions)
         {
-            //If the player press Q and the cooldown is 0
-            if (Input.GetKeyDown(KeyCode.Q) && fl_InvisCooldown == 0f)
+            //If the player press Q,  the cooldown is 0 and the player is stil alive
+            if (Input.GetKeyDown(KeyCode.Q) && fl_InvisCooldown == 0f && fl_Health > 0)
             {
                 //Set bool to true
                 bl_Invis = true;

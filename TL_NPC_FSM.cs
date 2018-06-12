@@ -280,7 +280,7 @@ public class TL_NPC_FSM : MonoBehaviour {
 
             //Replace the current path as the stored path
             nm_Agent.path = NewPath;
-        }        
+        }
     }
 
 	void MoveNPC()
@@ -417,8 +417,8 @@ public class TL_NPC_FSM : MonoBehaviour {
 
     void OnCollisionEnter(Collision Col)
     {
-        //When the NPC hits a smoke grenade
-        if (Col.gameObject.tag == "SmokeGrenade")
+        //When the NPC hits a smoke grenade or a pistol bullet from the player
+        if (Col.gameObject.tag == "SmokeGrenade" || Col.gameObject.tag == "PistolBullet")
         {
             //Set the smoke grenade's velocity to 0
             gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
